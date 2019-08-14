@@ -1,0 +1,12 @@
+{
+    "autoload": {
+        "psr-4": {
+            "Progresso\\Progresso\\CarbonFields\\": [
+                "src\/"
+            ]
+        }
+    },
+    "require": {
+        "htmlburger\/carbon-fields": "^3.1"
+    }
+}
