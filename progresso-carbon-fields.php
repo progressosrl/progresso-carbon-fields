@@ -1,22 +1,13 @@
 <?php
-
 /**
- * The plugin bootstrap file
+ * Carbon fields by Progresso srl
  *
- * This file is read by WordPress to generate the plugin information in the plugin
- * admin area. This file also includes all of the dependencies used by the plugin,
- * registers the activation and deactivation functions, and defines a function
- * that starts the plugin.
- *
- * @link              http://example.com
- * @since             1.0.0
- * @package           Progresso_Carbon_Fields
- *
- * @wordpress-plugin
  * Plugin Name:       Progresso Carbon Fields
- * Plugin URI:        http://progresso.srl
- * Description:       Carbon fields for Progresso plugins
- * Version:           3.0.0
+ * Plugin URI:        https://www.progresso.srl
+ * Description:       Carbon Fields provided by Progresso srl as a plugin
+ * Version:           3.1.3
+ * Requires at least: 4.9
+ * Tested up to:	  5.2.2
  * Author:            Progresso srl
  * Author URI:        http://progresso.srl
  * License:           GPL-2.0+
