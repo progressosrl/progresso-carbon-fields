@@ -32,12 +32,16 @@ if ($config['environment'] === 'production') {
     }
 
     // load the plugin update checker
-    require __DIR__ . '/libraries/plugin-update-checker/plugin-update-checker.php';
-    $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-        'https://github.com/progressosrl/progresso-carbon-fields/',
-        __FILE__,
-        'progresso-carbon-fields'
-    );
+    $pluginUpdateChecker = realpath(plugin_dir_path(__FILE__).'/../progresso-framework/libraries/plugin-update-checker/plugin-update-checker.php');
+    if (file_exists($pluginUpdateChecker)) {
+        require_once $pluginUpdateChecker;
+
+        Puc_v4_Factory::buildUpdateChecker(
+            'https://github.com/progressosrl/progresso-carbon-fields/',
+            __FILE__,
+            'progresso-carbon-fields'
+        );
+    }
 } else {
     require_once(__DIR__ . "/vendor/autoload.php");
 }
