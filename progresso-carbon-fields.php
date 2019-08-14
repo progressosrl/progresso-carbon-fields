@@ -43,12 +43,11 @@ if ($config['environment'] === 'production') {
 
     // load the plugin update checker
     require __DIR__ . '/libraries/plugin-update-checker/plugin-update-checker.php';
-    $myUpdateChecker = new Puc_v4p7_Vcs_PluginUpdateChecker(
-        new Puc_v4p7_Vcs_GitLabApi('https://git.progresso.srl/cristiano/wordpress-progresso-carbon-fields'),
+    $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
+        'https://github.com/progressosrl/progresso-carbon-fields/',
         __FILE__,
         'progresso-carbon-fields'
     );
-    $myUpdateChecker->setBranch('master');
 } else {
     require_once(__DIR__ . "/vendor/autoload.php");
 }
