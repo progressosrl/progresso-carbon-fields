@@ -23,7 +23,7 @@ You can install it by one of the following methods:
 * Uploading the plugin files to the `/wp-content/plugins/progresso-carbon-fields` directory.
 * Downloading the ZIP file and then uplaoding it using the admin panel
 * By using TGMPA with the following source
-https://github.com/YahnisElsts/plugin-update-checker/archive/master.zip
+https://github.com/progressosrl/progresso-carbon-fields/archive/master.zip
 
 == Usage ==
 
