@@ -32,16 +32,21 @@ if ($config['environment'] === 'production') {
     }
 
     // load the plugin update checker
-    $pluginUpdateChecker = realpath(plugin_dir_path(__FILE__).'/../progresso-framework/libraries/plugin-update-checker/plugin-update-checker.php');
-    if (file_exists($pluginUpdateChecker)) {
-        require_once $pluginUpdateChecker;
+    if (defined('PROGRESSO_FRAMEWORK_PATH')) {
+        autoupdater();
+    }
+} else {
+    require_once(__DIR__ . "/vendor/autoload.php");
+}
 
-        Puc_v4_Factory::buildUpdateChecker(
+function autoupdater() {
+    $pluginUpdateChecker = PROGRESSO_FRAMEWORK_PATH.'/libraries/plugin-update-checker/v4p7/plugin-update-checker.php';
+    if (file_exists($pluginUpdateChecker)) {
+        require_once($pluginUpdateChecker);
+        Puc_v4p7_Factory::buildUpdateChecker(
             'https://github.com/progressosrl/progresso-carbon-fields/',
             __FILE__,
             'progresso-carbon-fields'
         );
     }
-} else {
-    require_once(__DIR__ . "/vendor/autoload.php");
 }
