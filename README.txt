@@ -13,7 +13,7 @@ Plugin for Carbon Fields
 
 == Description ==
 
-This plugins is used by Progresso srl in order to use Carbon Fields as a plugin.
+This plugins is used by Progresso srl in order to use Carbon Fields as a plugin with autoupdate capability.
 You can find the documentation at https://docs.carbonfields.net
 
 
@@ -24,16 +24,6 @@ You can install it by one of the following methods:
 * Downloading the ZIP file and then uplaoding it using the admin panel
 * By using TGMPA with the following source
 https://github.com/progressosrl/progresso-carbon-fields/archive/master.zip
-
-== Usage ==
-
-Remember that:
-1. the namespace is Progresso\CarbonFields\ instead of CarbonFields\
-2. helpers, actions and filters have been prefixed by progresso_
-   As an example
-   carbon_fields_fields_registered
-   becomes
-   progresso_carbon_fields_fields_registered
 
 
 == Update the library ==
